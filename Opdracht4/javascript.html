@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Interactie</title>
+</head>
+
+<body>
+    <br>
+    <nav><a style="color: blue" href="../Opdracht1/inleiding.html">Inleiding</a>
+        <a style="color: blue" href="../Opdracht2/structuur.html">Structuur</a>
+        <a style="color: blue" href="../Opdracht3/css.html">Opmaak</a>
+        <a style="color: red" href="../Opdracht4/javascript.html">Interactie</a></nav>
+    <br>
+    <img id="myImage" onclick="changeImage()" src="pic_bulboff.gif" width="100" height="180">
+
+    <p>Met behulp van script-talen, zoals javascript kunnen we met de inhoud van een webpagina interageren.
+        <br> Klik ter demonstratie even op het lampje hierboven om het aan of uit te zetten.</p>
+
+    <script>
+        function changeImage() {
+            var image = document.getElementById('myImage');
+            if (image.src.match("bulbon")) {
+                image.src = "pic_bulboff.gif";
+            } else {
+                image.src = "pic_bulbon.gif";
+            }
+        }
+    </script>
+
+    <button id="button-1" type="button" onclick="myFunction()">
+        En door hier te klikken</button>
+    <script>
+        function myFunction() {
+            document.getElementById('demo').innerHTML = Date();
+            document.getElementById('verstopt').removeAttribute('hidden');
+        }
+    </script>
+    <p id="demo"></p>
+    <p id="verstopt" hidden>kunnen we de tijd en datum weergeven.</p>
+    <ul>
+        <li>
+            <a href="https://www.w3schools.com/js/exercise.asp?filename=exercise_events1" target="_blank">Oefening 1</a>
+        </li>
+        <li><a href="https://www.w3schools.com/js/exercise.asp?filename=exercise_events2" target="_blank">Oefening 2</a></li>
+        <li><a href="https://www.w3schools.com/js/exercise.asp?filename=exercise_events3" target="_blank">Oefening 3</a></li>
+    </ul>
+    <p>Hierboven zijn weer 3 kleine oefeningen, indien je ze snel opgelost krijgt kan je alsnog wat experimenteren.</p>
+</body>
+
+</html>
